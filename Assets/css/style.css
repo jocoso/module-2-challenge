@@ -1,0 +1,40 @@
+:root {
+    --layout-1-bgcolor: #000000;
+    --layout-1-txtcolor: #f6f6f6;
+    --layout-1-highlight: #ffc41b;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+
+#nav-bar {
+    display: flex;
+    background-color: var(--layout-1-bgcolor);
+    color: var(--layout-1-highlight);
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+#nav-bar ul {
+    position: absolute;
+    right: 50px;
+}
+
+#nav-bar ul > li {
+    display: inline;
+    font-weight: 1;
+    text-decoration: none;
+}
+
+#nav-bar ul > li a {
+    color: var(--layout-1-highlight);
+    text-decoration: none;
+    padding: 0px 10px;
+    border-bottom: 3px solid var(--layout-1-highlight);
+}
+
