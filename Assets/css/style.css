@@ -2,13 +2,16 @@
     --layout-1-bgcolor: #101114;
     --layout-1-txtcolor: #f6f6f6;
     --layout-1-highlight: #ffc41b;
-    --layout-1-fonts: Arial, Verdana, "Geneva", Tahoma, sans-serif;
+
+    --layout-fonts: Arial, Verdana, "Geneva", Tahoma, sans-serif;
+    --layout-1-accentmargin: 5em;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    font-family: var(--layout-1-fonts);
+    font-family: var(--layout-fonts);
+    line-height: normal;
 }
 
 /* NAVBAR */
@@ -22,16 +25,12 @@ body {
     position: relative;
 }
 
-#nav-bar ul {
-    position: absolute;
-    right: 50px;
-}
-
-#nav-bar ul > li {
+#nav-bar ul li {
     display: inline;
+    font-size: 20px;
 }
 
-#nav-bar ul > li a {
+#nav-bar a {
     color: var(--layout-1-highlight);
     text-decoration: none;
     padding: 0px 10px;
@@ -39,16 +38,43 @@ body {
 }
 
 #title {
-    font-size: xx-large;
-    padding-right: 1%;
+    font-size: 45px;
+    padding: 0 1%;
     margin: 5px 0 10px 0px;
     font-weight: 700;
+    text-align: end;
+}
+
+/* LOGO */
+#logo {
+    width: 100%;
+    background-image: url("../logo.png");
+    height: 250px;
+    background-size: cover;
+    position: relative;
+}
+
+#greet-box {
+    font-size: 25px;
+    font-weight: bold;
+    bottom: 0.5em;
+    border: 2px dotted black;
+    text-align: center;
+    padding: 5px;
 }
 
 /* CLASSES */
 .content-box {
     background-color: var(--layout-1-highlight);
     color: var(--layout-1-bgcolor);
-    width: 20%;
-    
+    width: 20vw;
+}
+
+.kick-tothe-right {
+    position: absolute;
+    right: var(--layout-1-accentmargin);
+}
+
+.test-case {
+    border: 1px solid red;
 }
