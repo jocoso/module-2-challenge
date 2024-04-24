@@ -1,12 +1,14 @@
 :root {
-    --layout-1-bgcolor: #000000;
+    --layout-1-bgcolor: #101114;
     --layout-1-txtcolor: #f6f6f6;
     --layout-1-highlight: #ffc41b;
+    --layout-1-fonts: Arial, Verdana, "Geneva", Tahoma, sans-serif;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    font-family: var(--layout-1-fonts);
 }
 
 /* NAVBAR */
@@ -27,8 +29,6 @@ body {
 
 #nav-bar ul > li {
     display: inline;
-    font-weight: 1;
-    text-decoration: none;
 }
 
 #nav-bar ul > li a {
@@ -38,3 +38,17 @@ body {
     border-bottom: 3px solid var(--layout-1-highlight);
 }
 
+#title {
+    font-size: xx-large;
+    padding-right: 1%;
+    margin: 5px 0 10px 0px;
+    font-weight: 700;
+}
+
+/* CLASSES */
+.content-box {
+    background-color: var(--layout-1-highlight);
+    color: var(--layout-1-bgcolor);
+    width: 20%;
+    
+}
