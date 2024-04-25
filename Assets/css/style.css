@@ -2,9 +2,13 @@
     --layout-1-bgcolor: #101114;
     --layout-1-txtcolor: #f6f6f6;
     --layout-1-highlight: #ffc41b;
+    --layout-1-accentmargin: 5em;
+
+    --layout-2-bgcolor: #EEEEF6;
+    --layout-2-hdrcolor: #DAAD01;
+    --layout-2-txtcolor: #333332;
 
     --layout-fonts: Arial, Verdana, "Geneva", Tahoma, sans-serif;
-    --layout-1-accentmargin: 5em;
 }
 
 body {
@@ -45,7 +49,7 @@ body {
     text-align: end;
 }
 
-/* LOGO */
+    /* LOGO */
 #logo {
     width: 100%;
     background-image: url("../logo.png");
@@ -63,6 +67,39 @@ body {
     padding: 5px;
 }
 
+/* CONTENT */
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--layout-2-bgcolor);
+    color: var(--layout-2-txtcolor);
+    align-items: center;
+    justify-content: center;
+}
+
+
+#content > div {
+    display: flex;
+    margin: 50px 0;
+    width: 80%;
+}
+
+#content > div h2 {
+    color: var(--layout-2-hdrcolor);
+    padding-right: 10px;
+    min-width: 15vw;
+    text-align: right;
+    align-self: flex-start;
+    font-size: 2.2em;
+    
+}
+
+#content div > :nth-child(2) {
+    border-left: .2em solid var(--layout-2-hdrcolor);
+    padding-left: 20px;
+}
+
 /* CLASSES */
 .content-box {
     background-color: var(--layout-1-highlight);
@@ -77,4 +114,15 @@ body {
 
 .test-case {
     border: 1px solid red;
+}
+
+.centered-container {
+    display: table;
+    height: 100%;
+}
+
+.centered-element {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
